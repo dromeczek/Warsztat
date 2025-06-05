@@ -1,12 +1,139 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\igord\\desktop\\proejktnad\\workshomanager\\workshomanager\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\igord\\desktop\\proejktnad\\workshomanager\\workshomanager\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\igord\\desktop\\proejktnad\\workshomanager\\workshomanager\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\igord\\desktop\\proejktnad\\workshomanager\\workshomanager\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\igord\\desktop\\proejktnad\\workshomanager\\workshomanager\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\igord\\desktop\\proejktnad\\workshomanager\\workshomanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\igord\\desktop\\proejktnad\\workshomanager\\workshomanager\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\VehicleController.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Controllers\\VehicleController.cs",
+              "ToolTip": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\VehicleController.cs",
+              "RelativeToolTip": "WorkshoManager\\Controllers\\VehicleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:38:43.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "WorkshoManager\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:37:43.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "WorkshoManager\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:32:07.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WorkshoManager\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WorkshoManager\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAtwDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-05T23:26:32.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "WorkshoManager\\Views\\Admin\\Users.cshtml",
+              "ToolTip": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "WorkshoManager\\Views\\Admin\\Users.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-05T23:19:39.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "WorkshoManager\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:18:11.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Program.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Program.cs",
+              "ToolTip": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\Program.cs",
+              "RelativeToolTip": "WorkshoManager\\Program.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:17:09.032Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

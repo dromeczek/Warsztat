@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityUser>
+
+@{
+    var userRoles = ViewBag.UserRoles as Dictionary<string, IList<string>>;
+}
+
+<h2>Lista użytkowników</h2>
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Akcja</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>@string.Join(", ", userRoles[user.Id])</td>
+            <td>
+                <form asp-action="SetRole" method="post">
+                    <input type="hidden" name="userId" value="@user.Id" />
+                    <select name="role">
+                        <option value="Admin">Admin</option>
+                        <option value="Recepcjonista">Recepcjonista</option>
+                        <option value="Mechanik">Mechanik</option>
+                    </select>
+                    <button type="submit">Zmień rolę</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

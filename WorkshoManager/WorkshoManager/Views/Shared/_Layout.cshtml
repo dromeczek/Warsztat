@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -25,11 +28,31 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Admin" asp-action="Users">Zarządzaj rolami</a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="container mt-2">
+                @if (User.IsInRole("Recepcjonista"))
+                {
+                    <div class="alert alert-info">Jesteś Recepcjonistą</div>
+                }
+                else if (User.IsInRole("Mechanik"))
+                {
+                    <div class="alert alert-warning">Jesteś Mechanikiem</div>
+                }
+            </div>
+        }
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -42,6 +65,7 @@
             &copy; 2025 - WorkshoManager - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
