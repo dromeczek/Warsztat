@@ -6,6 +6,8 @@ namespace WorkshoManager.Data;
 public class ApplicationDbContext : IdentityDbContext
 {
     public DbSet<Customer> Customers { get; set; }
+    public DbSet<Vehicle> Vehicles { get; set; }
+
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)

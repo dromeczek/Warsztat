@@ -45,6 +45,8 @@
                 @if (User.IsInRole("Recepcjonista"))
                 {
                     <div class="alert alert-info">Jesteś Recepcjonistą</div>
+                    <a class="btn btn-outline-primary" asp-controller="Customer" asp-action="Index"> Lista klientów</a>
+
                 }
                 else if (User.IsInRole("Mechanik"))
                 {

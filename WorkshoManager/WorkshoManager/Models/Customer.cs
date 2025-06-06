@@ -15,5 +15,7 @@ namespace WorkshoManager.Models
         [Required]
         [Phone]
         public string PhoneNumber { get; set; }
+        public List<Vehicle> Vehicles { get; set; } = new();
+
     }
 }

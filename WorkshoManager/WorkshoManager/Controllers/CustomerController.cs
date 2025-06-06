@@ -37,4 +37,16 @@ public class CustomerController : Controller
 
         return View(customer);
     }
+
+    public IActionResult Delete(int id)
+    {
+        var customer = _context.Customers.FirstOrDefault(c => c.Id == id);
+        if (customer != null)
+        {
+            _context.Customers.Remove(customer);
+            _context.SaveChanges();
+        }
+
+        return RedirectToAction(nameof(Index));
+    }
 }

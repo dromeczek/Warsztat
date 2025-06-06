@@ -1,22 +1,31 @@
-﻿@model IEnumerable<Customer>
+﻿@model List<WorkshoManager.Models.Customer>
 
 <h2>Lista klientów</h2>
 
-<table class="table">
+<p>
+    <a class="btn btn-success" asp-action="Create">Dodaj klienta</a>
+</p>
+
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>Imię</th>
             <th>Nazwisko</th>
             <th>Telefon</th>
+            <th>Akcje</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var c in Model)
+        @foreach (var item in Model)
         {
             <tr>
-                <td>@c.FirstName</td>
-                <td>@c.LastName</td>
-                <td>@c.PhoneNumber</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.PhoneNumber</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" asp-controller="Vehicle" asp-action="Create" asp-route-customerId="@item.Id"> Dodaj pojazd</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Na pewno usunąć klienta?');"> Usuń</a>
+                </td>
             </tr>
         }
     </tbody>
