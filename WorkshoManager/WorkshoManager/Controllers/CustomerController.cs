@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WorkshoManager.Data;
 using WorkshoManager.Models;
 
@@ -49,4 +50,16 @@ public class CustomerController : Controller
 
         return RedirectToAction(nameof(Index));
     }
+    public IActionResult Details(int id)
+    {
+        var customer = _context.Customers
+            .Include(c => c.Vehicles)
+            .FirstOrDefault(c => c.Id == id);
+
+        if (customer == null)
+            return NotFound();
+
+        return View(customer);
+    }
+
 }

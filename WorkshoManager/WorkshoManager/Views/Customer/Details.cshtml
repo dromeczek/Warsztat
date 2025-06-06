@@ -1,10 +1,12 @@
 ﻿@model WorkshoManager.Models.Customer
 
 <h2>Profil klienta</h2>
+
 <p><strong>@Model.FirstName @Model.LastName</strong></p>
 <p>Telefon: @Model.PhoneNumber</p>
 
 <h4>Pojazdy</h4>
+
 @if (Model.Vehicles.Any())
 {
     <table class="table">
@@ -15,6 +17,8 @@
                 <th>VIN</th>
                 <th>Rejestracja</th>
                 <th>Rok</th>
+                <th>Zdjęcie</th>
+                <th>Usuń</th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +30,21 @@
                     <td>@v.VIN</td>
                     <td>@v.RegistrationNumber</td>
                     <td>@v.Year</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(v.ImageUrl))
+                        {
+                            <img src="@v.ImageUrl" alt="Zdjęcie pojazdu" style="max-width: 100px;" />
+                        }
+                        else
+                        {
+                            <span>Brak</span>
+                        }
+                    </td>
+                    <td>
+                        <form asp-controller="Vehicle" asp-action="Delete" asp-route-id="@v.Id" method="post" onsubmit="return confirm('Czy na pewno chcesz usunąć ten pojazd?');">
+                            <button type="submit" class="btn btn-danger btn-sm">Usuń</button>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>

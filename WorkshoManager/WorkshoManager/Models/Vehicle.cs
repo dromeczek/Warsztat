@@ -6,6 +6,7 @@ namespace WorkshoManager.Models
 {
     public class Vehicle
     {
+
         public int Id { get; set; }
 
         [Required]
@@ -26,6 +27,7 @@ namespace WorkshoManager.Models
         public int Year { get; set; }
 
         public int CustomerId { get; set; }
+        public string? ImageUrl { get; set; }
 
         [ValidateNever]
         public Customer Customer { get; set; }

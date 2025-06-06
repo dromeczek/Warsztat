@@ -23,8 +23,11 @@
                 <td>@item.LastName</td>
                 <td>@item.PhoneNumber</td>
                 <td>
-                    <a class="btn btn-sm btn-primary" asp-controller="Vehicle" asp-action="Create" asp-route-customerId="@item.Id"> Dodaj pojazd</a>
-                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Na pewno usunąć klienta?');"> Usuń</a>
+                    <a class="btn btn-sm btn-info" asp-controller="Customer" asp-action="Details" asp-route-id="@item.Id">Pojazdy</a>
+                    <a class="btn btn-sm btn-primary" asp-controller="Vehicle" asp-action="Create" asp-route-customerId="@item.Id">Dodaj pojazd</a>
+                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;" onsubmit="return confirm('Na pewno usunąć klienta?');">
+                        <button type="submit" class="btn btn-sm btn-danger">Usuń</button>
+                    </form>
                 </td>
             </tr>
         }

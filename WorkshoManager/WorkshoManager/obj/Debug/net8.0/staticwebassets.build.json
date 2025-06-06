@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mRhan2BlG8uaX5enNNjdvpwhcGkykBb6IPFuI/U8DfQ=",
+  "Hash": "I5wdbcEpvPuMSz6ArHDgmH+Toa/3clMOZX16BsiLzTI=",
   "Source": "WorkshoManager",
   "BasePath": "_content/WorkshoManager",
   "Mode": "Default",
@@ -2333,6 +2333,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\wwwroot\\uploads\\dd1d71c8-2065-4ea5-bd42-ad181d1e14e6.jpg",
+      "SourceId": "WorkshoManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\wwwroot\\",
+      "BasePath": "_content/WorkshoManager",
+      "RelativePath": "uploads/dd1d71c8-2065-4ea5-bd42-ad181d1e14e6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\dd1d71c8-2065-4ea5-bd42-ad181d1e14e6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\wwwroot\\uploads\\fda194df-7180-499d-929c-0e0e89f45b69.jpg",
+      "SourceId": "WorkshoManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\wwwroot\\",
+      "BasePath": "_content/WorkshoManager",
+      "RelativePath": "uploads/fda194df-7180-499d-929c-0e0e89f45b69.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\fda194df-7180-499d-929c-0e0e89f45b69.jpg"
     }
   ]
 }
