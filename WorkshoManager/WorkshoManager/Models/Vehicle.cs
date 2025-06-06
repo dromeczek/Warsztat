@@ -6,7 +6,6 @@ namespace WorkshoManager.Models
 {
     public class Vehicle
     {
-
         public int Id { get; set; }
 
         [Required]
@@ -31,5 +30,7 @@ namespace WorkshoManager.Models
 
         [ValidateNever]
         public Customer Customer { get; set; }
+
+        public List<Order> Orders { get; set; } = new(); 
     }
 }

@@ -1,0 +1,50 @@
+﻿@model List<WorkshoManager.Models.Order>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Zlecenia";
+}
+
+<h2>Zlecenia</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Klient</th>
+            <th>Pojazd</th>
+            <th>Mechanik</th>
+            <th>Opis</th>
+            <th>Status</th>
+            <th>Data utworzenia</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.Customer.LastName</td>
+                <td>@order.Vehicle.RegistrationNumber</td>
+                <td>@order.Mechanic?.UserName</td>
+                <td>@order.Description</td>
+                <td>@order.Status</td>
+                <td>@order.CreatedAt.ToString("yyyy-MM-dd")</td>
+                <td>
+                    @if (User.IsInRole("Mechanik") && order.MechanicId == UserManager.GetUserId(User))
+                    {
+                        <form asp-action="ChangeStatus" method="post">
+                            <input type="hidden" name="id" value="@order.Id" />
+                            <select name="status" class="form-select form-select-sm">
+                                <option value="Nowe" selected="@(order.Status == "Nowe")">Nowe</option>
+                                <option value="W trakcie" selected="@(order.Status == "W trakcie")">W trakcie</option>
+                                <option value="Zakończone" selected="@(order.Status == "Zakończone")">Zakończone</option>
+                            </select>
+                            <button type="submit" class="btn btn-sm btn-primary mt-1">Zmień</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

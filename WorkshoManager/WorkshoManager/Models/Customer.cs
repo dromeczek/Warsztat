@@ -16,6 +16,7 @@ namespace WorkshoManager.Models
         [Phone]
         public string PhoneNumber { get; set; }
         public List<Vehicle> Vehicles { get; set; } = new();
+        public List<Order> Orders { get; set; } = new();
 
     }
 }

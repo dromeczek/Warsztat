@@ -1,0 +1,49 @@
+﻿@model WorkshoManager.Models.Order
+
+@{
+    ViewData["Title"] = "Nowe zlecenie";
+}
+
+<h2>Nowe zlecenie</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="CustomerId"></label>
+        <select asp-for="CustomerId" asp-items="@(ViewData["Customers"] as SelectList)" class="form-control">
+            <option value="">-- wybierz klienta --</option>
+        </select>
+        <span asp-validation-for="CustomerId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VehicleId"></label>
+        <select asp-for="VehicleId" asp-items="@(ViewData["Vehicles"] as SelectList)" class="form-control">
+            <option value="">-- wybierz pojazd --</option>
+        </select>
+        <span asp-validation-for="VehicleId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MechanicId"></label>
+        <select asp-for="MechanicId" asp-items="@(ViewData["Mechanics"] as SelectList)" class="form-control">
+            <option value="">-- przypisz mechanika --</option>
+        </select>
+        <span asp-validation-for="MechanicId" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="Status" value="Nowe" />
+
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

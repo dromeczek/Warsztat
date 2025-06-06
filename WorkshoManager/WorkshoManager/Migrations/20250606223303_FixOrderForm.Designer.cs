@@ -9,11 +9,11 @@ using WorkshoManager.Data;
 
 #nullable disable
 
-namespace WorkshoManager.Data.Migrations
+namespace WorkshoManager.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250606105846_AddVehicle")]
-    partial class AddVehicle
+    [Migration("20250606223303_FixOrderForm")]
+    partial class FixOrderForm
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -252,6 +252,45 @@ namespace WorkshoManager.Data.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("WorkshoManager.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MechanicId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VehicleId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("MechanicId");
+
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("WorkshoManager.Models.Vehicle", b =>
                 {
                     b.Property<int>("Id")
@@ -266,6 +305,9 @@ namespace WorkshoManager.Data.Migrations
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -341,12 +383,38 @@ namespace WorkshoManager.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("WorkshoManager.Models.Order", b =>
+                {
+                    b.HasOne("WorkshoManager.Models.Customer", "Customer")
+                        .WithMany("Orders")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Mechanic")
+                        .WithMany()
+                        .HasForeignKey("MechanicId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("WorkshoManager.Models.Vehicle", "Vehicle")
+                        .WithMany("Orders")
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Mechanic");
+
+                    b.Navigation("Vehicle");
+                });
+
             modelBuilder.Entity("WorkshoManager.Models.Vehicle", b =>
                 {
                     b.HasOne("WorkshoManager.Models.Customer", "Customer")
                         .WithMany("Vehicles")
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Customer");
@@ -354,7 +422,14 @@ namespace WorkshoManager.Data.Migrations
 
             modelBuilder.Entity("WorkshoManager.Models.Customer", b =>
                 {
+                    b.Navigation("Orders");
+
                     b.Navigation("Vehicles");
+                });
+
+            modelBuilder.Entity("WorkshoManager.Models.Vehicle", b =>
+                {
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

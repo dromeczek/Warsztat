@@ -23,51 +23,60 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+
+                        @if (User.Identity.IsAuthenticated)
                         {
+                            @* Przycisk do zarządzania użytkownikami tylko dla Admina *@
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="Admin" asp-action="Users">Zarządzaj rolami</a>
+                                </li>
+                            }
+
+                            @* Przyciski wspólne dla wszystkich zalogowanych *@
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Admin" asp-action="Users">Zarządzaj rolami</a>
+                                <a class="nav-link text-dark" asp-controller="Orders" asp-action="Index">Zlecenia</a>
                             </li>
+
+                            @* Tylko Recepcjonista i Admin może tworzyć zlecenia *@
+                            @if (User.IsInRole("Recepcjonista") || User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-success" asp-controller="Orders" asp-action="Create">Nowe zlecenie</a>
+                                </li>
+                            }
+
+                            @* Tylko Recepcjonista ma dostęp do klientów *@
+                            @if (User.IsInRole("Recepcjonista"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-controller="Customer" asp-action="Index">Lista klientów</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-success" asp-controller="Customer" asp-action="Create">Dodaj klienta</a>
+                                </li>
+                            }
                         }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
-        @if (User.Identity.IsAuthenticated)
-        {
-            <div class="container mt-2">
-                @if (User.IsInRole("Recepcjonista"))
-                {
-                    <div class="alert alert-info">Jesteś Recepcjonistą</div>
-                    <a class="btn btn-outline-primary" asp-controller="Customer" asp-action="Index"> Lista klientów</a>
-
-                }
-                else if (User.IsInRole("Mechanik"))
-                {
-                    <div class="alert alert-warning">Jesteś Mechanikiem</div>
-                }
-            </div>
-        }
-        @if (User.Identity.IsAuthenticated && User.IsInRole("Recepcjonista"))
-        {
-            <a class="btn btn-success" asp-controller="Customer" asp-action="Create">Dodaj klienta</a>
-        }
-
-
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted mt-4">
         <div class="container">
             &copy; 2025 - WorkshoManager - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

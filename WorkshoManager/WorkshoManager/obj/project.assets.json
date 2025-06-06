@@ -4458,11 +4458,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\WorkshoManager.csproj",
+      "projectUniqueName": "C:\\Users\\igord\\Desktop\\witam\\Warsztat\\WorkshoManager\\WorkshoManager\\WorkshoManager.csproj",
       "projectName": "WorkshoManager",
-      "projectPath": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\WorkshoManager.csproj",
+      "projectPath": "C:\\Users\\igord\\Desktop\\witam\\Warsztat\\WorkshoManager\\WorkshoManager\\WorkshoManager.csproj",
       "packagesPath": "C:\\Users\\igord\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\igord\\Desktop\\proejktnad\\WorkshoManager\\WorkshoManager\\obj\\",
+      "outputPath": "C:\\Users\\igord\\Desktop\\witam\\Warsztat\\WorkshoManager\\WorkshoManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
