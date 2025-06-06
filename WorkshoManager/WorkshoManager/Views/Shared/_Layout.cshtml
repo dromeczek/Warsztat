@@ -52,6 +52,11 @@
                 }
             </div>
         }
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Recepcjonista"))
+        {
+            <a class="btn btn-success" asp-controller="Customer" asp-action="Create">Dodaj klienta</a>
+        }
+
 
     </header>
     <div class="container">

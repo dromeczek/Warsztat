@@ -1,12 +1,40 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using WorkshoManager.Data;
+using WorkshoManager.Models;
 
-namespace WorkshoManager.Controllers
+[Authorize(Roles = "Recepcjonista,Admin")]
+public class CustomerController : Controller
 {
-    public class CustomerController : Controller
+    private readonly ApplicationDbContext _context;
+
+    public CustomerController(ApplicationDbContext context)
     {
-        public IActionResult Index()
+        _context = context;
+    }
+
+    public IActionResult Index()
+    {
+        var customers = _context.Customers.ToList();
+        return View(customers);
+    }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Create(Customer customer)
+    {
+        if (ModelState.IsValid)
         {
-            return View();
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
+
+        return View(customer);
     }
 }
