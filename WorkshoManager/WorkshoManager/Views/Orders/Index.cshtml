@@ -8,6 +8,11 @@
 
 <h2>Zlecenia</h2>
 
+@if (User.IsInRole("Recepcjonista") || User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="btn btn-success mb-3">Nowe zlecenie</a>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -31,16 +36,17 @@
                 <td>@order.Status</td>
                 <td>@order.CreatedAt.ToString("yyyy-MM-dd")</td>
                 <td>
+                    <a asp-action="Details" asp-route-id="@order.Id" class="btn btn-sm btn-outline-secondary mb-1">Szczegóły</a>
                     @if (User.IsInRole("Mechanik") && order.MechanicId == UserManager.GetUserId(User))
                     {
-                        <form asp-action="ChangeStatus" method="post">
+                        <form asp-action="ChangeStatus" method="post" class="d-inline">
                             <input type="hidden" name="id" value="@order.Id" />
-                            <select name="status" class="form-select form-select-sm">
+                            <select name="status" class="form-select form-select-sm d-inline w-auto">
                                 <option value="Nowe" selected="@(order.Status == "Nowe")">Nowe</option>
                                 <option value="W trakcie" selected="@(order.Status == "W trakcie")">W trakcie</option>
                                 <option value="Zakończone" selected="@(order.Status == "Zakończone")">Zakończone</option>
                             </select>
-                            <button type="submit" class="btn btn-sm btn-primary mt-1">Zmień</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Zmień</button>
                         </form>
                     }
                 </td>

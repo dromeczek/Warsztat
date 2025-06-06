@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkshoManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8116d4d776de7bd94c3c6367805f4081f8b37d7b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84541131f66a280ee1cc94997a1effc92a082414")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkshoManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkshoManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

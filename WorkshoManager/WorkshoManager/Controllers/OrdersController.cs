@@ -87,4 +87,21 @@ public class OrdersController : Controller
 
         return RedirectToAction("Index");
     }
+    public IActionResult Details(int id)
+    {
+        var order = _context.Orders
+            .Include(o => o.Customer)
+            .Include(o => o.Vehicle)
+            .Include(o => o.Mechanic)
+            .Include(o => o.Tasks)
+            .FirstOrDefault(o => o.Id == id);
+
+        if (order == null)
+        {
+            return NotFound();
+        }
+
+        return View(order);
+    }
+
 }

@@ -27,5 +27,7 @@ public class Order
     public string Description { get; set; }
 
     public string Status { get; set; } = "Nowe";
+    public List<ServiceTask> Tasks { get; set; } = new();
+
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 }

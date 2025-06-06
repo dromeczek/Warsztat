@@ -9,6 +9,7 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Vehicle> Vehicles { get; set; }
 
+    public DbSet<ServiceTask> ServiceTasks { get; set; }
 
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

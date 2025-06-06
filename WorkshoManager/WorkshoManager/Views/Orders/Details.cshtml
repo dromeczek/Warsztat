@@ -1,0 +1,41 @@
+﻿@model WorkshoManager.Models.Order
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+<h2>Szczegóły zlecenia</h2>
+
+<dl class="row">
+    <dt class="col-sm-3">Klient:</dt>
+    <dd class="col-sm-9">@Model.Customer.LastName</dd>
+
+    <dt class="col-sm-3">Pojazd:</dt>
+    <dd class="col-sm-9">@Model.Vehicle.RegistrationNumber</dd>
+
+    <dt class="col-sm-3">Opis:</dt>
+    <dd class="col-sm-9">@Model.Description</dd>
+
+    <dt class="col-sm-3">Status:</dt>
+    <dd class="col-sm-9">@Model.Status</dd>
+</dl>
+
+@if (Model.Tasks?.Any() == true)
+{
+    <h4>Czynności serwisowe</h4>
+    <ul>
+        @foreach (var task in Model.Tasks)
+        {
+            <li>@task.Name – @task.LaborCost zł</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Brak czynności serwisowych.</p>
+}
+
+@if (User.IsInRole("Mechanik") && Model.MechanicId == UserManager.GetUserId(User))
+{
+    <a class="btn btn-success" asp-controller="ServiceTasks" asp-action="Create" asp-route-orderId="@Model.Id">Dodaj czynność</a>
+}
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Powrót</a>
