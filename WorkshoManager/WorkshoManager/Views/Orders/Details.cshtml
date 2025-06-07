@@ -24,9 +24,31 @@
     <ul>
         @foreach (var task in Model.Tasks)
         {
-            <li>@task.Name – @task.LaborCost zł</li>
+            var partsCost = task.UsedParts?.Sum(up => up.Quantity * up.Part.UnitPrice) ?? 0;
+            var total = task.LaborCost + partsCost;
+
+            <li>
+                <strong>@task.Name</strong> – robocizna: <strong>@task.LaborCost zł</strong><br />
+                Części:
+                <ul>
+                    @foreach (var part in task.UsedParts)
+                    {
+                        <li>@part.Part.Name – @part.Quantity × @part.Part.UnitPrice zł = @(part.Quantity * part.Part.UnitPrice) zł</li>
+                    }
+                </ul>
+                <strong>SUMA: @total zł</strong>
+
+                <br />
+                <a asp-controller="UsedParts" asp-action="Create" asp-route-serviceTaskId="@task.Id" class="btn btn-sm btn-outline-primary">Dodaj części</a>
+            </li>
         }
     </ul>
+
+     
+    var totalOrderCost = Model.Tasks.Sum(task =>
+        task.LaborCost + (task.UsedParts?.Sum(up => up.Quantity * up.Part.UnitPrice) ?? 0));
+     
+    <h4>Łączny koszt zlecenia: <span class="text-success">@totalOrderCost zł</span></h4>
 }
 else
 {

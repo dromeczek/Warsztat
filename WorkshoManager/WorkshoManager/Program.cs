@@ -79,6 +79,27 @@ async Task SeedRolesAndAdminAsync(IServiceProvider serviceProvider)
             await userManager.AddToRoleAsync(newAdmin, "Admin");
         }
     }
+
+    //konto mechanika
+    string mechanicEmail = "mechanik@example.com";
+    string mechanicPassword = "Mechanik123!";
+
+    var mechanicUser = await userManager.FindByEmailAsync(mechanicEmail);
+    if (mechanicUser == null)
+    {
+        var newMechanic = new IdentityUser
+        {
+            UserName = mechanicEmail,
+            Email = mechanicEmail,
+            EmailConfirmed = true
+        };
+
+        var result = await userManager.CreateAsync(newMechanic, mechanicPassword);
+        if (result.Succeeded)
+        {
+            await userManager.AddToRoleAsync(newMechanic, "Mechanik");
+        }
+    }
 }
 
 using (var scope = app.Services.CreateScope())

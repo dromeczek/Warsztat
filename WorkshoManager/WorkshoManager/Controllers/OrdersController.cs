@@ -27,7 +27,7 @@ public class OrdersController : Controller
             var myOrders = _context.Orders
                 .Include(o => o.Customer)
                 .Include(o => o.Vehicle)
-                .Where(o => o.MechanicId == user.Id)
+                .Include(o => o.Mechanic)   //.Where(o => o.MechanicId == user.Id)
                 .ToList();
             return View(myOrders);
         }
@@ -94,6 +94,8 @@ public class OrdersController : Controller
             .Include(o => o.Vehicle)
             .Include(o => o.Mechanic)
             .Include(o => o.Tasks)
+                .ThenInclude(t => t.UsedParts)
+                    .ThenInclude(up => up.Part)
             .FirstOrDefault(o => o.Id == id);
 
         if (order == null)

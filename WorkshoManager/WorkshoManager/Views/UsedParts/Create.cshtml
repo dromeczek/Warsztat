@@ -1,0 +1,23 @@
+﻿@model WorkshoManager.Models.UsedPart
+
+@{
+    ViewData["Title"] = "Dodaj część do czynności";
+}
+
+<h2>Dodaj część</h2>
+
+<form asp-action="Create" method="post">
+    <input type="hidden" asp-for="ServiceTaskId" />
+
+    <div class="form-group">
+        <label asp-for="PartId">Część</label>
+        <select asp-for="PartId" asp-items="ViewBag.Parts" class="form-control"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Quantity">Ilość</label>
+        <input asp-for="Quantity" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Dodaj część</button>
+</form>

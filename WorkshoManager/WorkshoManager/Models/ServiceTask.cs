@@ -7,6 +7,7 @@ namespace WorkshoManager.Models
     public class ServiceTask
     {
         public int Id { get; set; }
+        public List<UsedPart> UsedParts { get; set; }
 
         [Required]
         [Display(Name = "Nazwa czynności")]

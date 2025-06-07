@@ -44,6 +44,18 @@ public class ApplicationDbContext : IdentityDbContext
             .WithMany()
             .HasForeignKey(o => o.MechanicId)
             .OnDelete(DeleteBehavior.SetNull);
+
+        modelBuilder.Entity<UsedPart>()
+            .HasOne(up => up.Part)
+            .WithMany()
+            .HasForeignKey(up => up.PartId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<UsedPart>()
+            .HasOne(up => up.ServiceTask)
+            .WithMany()
+            .HasForeignKey(up => up.ServiceTaskId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 
 
