@@ -61,3 +61,9 @@ else
 }
 
 <a asp-action="Index" class="btn btn-secondary mt-3">Powrót</a>
+
+
+@if (User.IsInRole("Admin") || Model.MechanicId == UserManager.GetUserId(User))
+{
+    <a asp-action="EditStatus" asp-route-id="@Model.Id" class="btn btn-warning">Zmień status</a>
+}

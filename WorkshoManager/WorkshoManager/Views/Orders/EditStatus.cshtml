@@ -1,0 +1,24 @@
+﻿@model WorkshoManager.Models.Order
+
+@{
+    ViewData["Title"] = "Zmień status";
+}
+
+<h2>Zmień status zlecenia</h2>
+
+<form asp-action="EditStatus" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Status" class="control-label">Status</label>
+        <select asp-for="Status" class="form-control">
+            <option>Nowe</option>
+            <option>W trakcie</option>
+            <option>Zakończone</option>
+            <option>Anulowane</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Zapisz</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Anuluj</a>
+</form>

@@ -106,4 +106,54 @@ public class OrdersController : Controller
         return View(order);
     }
 
+
+    [Authorize(Roles = "Admin,Mechanik")]
+    public async Task<IActionResult> EditStatus(int id)
+    {
+        var order = await _context.Orders.FindAsync(id);
+        if (order == null)
+            return NotFound();
+
+        var userId = _userManager.GetUserId(User);
+
+        // Tylko przypisany mechanik lub admin
+        if (User.IsInRole("Admin") || order.MechanicId == userId)
+        {
+            return View(order);
+        }
+
+        return Forbid(); // brak dostępu
+    }
+
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Authorize(Roles = "Admin,Mechanik")]
+    public async Task<IActionResult> EditStatus(Order updatedOrder)
+    {
+        var order = await _context.Orders.FindAsync(updatedOrder.Id);
+        if (order == null)
+            return NotFound();
+
+        var userId = _userManager.GetUserId(User);
+
+        // Sprawdzenie uprawnień
+        if (!User.IsInRole("Admin") && order.MechanicId != userId)
+        {
+            return Forbid();
+        }
+
+        // Zmieniamy status
+        order.Status = updatedOrder.Status;
+
+        // Jeśli "Zakończone" → ustaw datę zakończenia
+        if (order.Status == "Zakończone" && order.CompletionDate == null)
+        {
+            order.CompletionDate = DateTime.Now;
+        }
+
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Details), new { id = order.Id });
+    }
+
 }

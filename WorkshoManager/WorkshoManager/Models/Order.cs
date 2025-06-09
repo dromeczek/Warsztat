@@ -30,4 +30,6 @@ public class Order
     public List<ServiceTask> Tasks { get; set; } = new();
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+    public DateTime? CompletionDate { get; set; }
 }
