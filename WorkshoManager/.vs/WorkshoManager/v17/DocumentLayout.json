@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\views\\orders\\editstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\views\\orders\\editstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +15,24 @@
       "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\views\\orders\\editstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\views\\orders\\editstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,10 +59,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|c:\\users\\konra\\documents\\~studia\\iv semestr\\programowanie na platformie .net\\projekt_warsztat\\workshomanager\\workshomanager\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51011EF-584A-4B5F-A64F-937241A60185}|WorkshoManager\\WorkshoManager.csproj|solutionrelative:workshomanager\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -56,7 +68,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -72,12 +84,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "CommentsController.cs",
+              "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Controllers\\CommentsController.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Controllers\\CommentsController.cs",
+              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Controllers\\CommentsController.cs",
+              "RelativeToolTip": "WorkshoManager\\Controllers\\CommentsController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T21:05:28.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Comment.cs",
+              "RelativeToolTip": "WorkshoManager\\Models\\Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:56:41.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Customer.cs",
+              "RelativeToolTip": "WorkshoManager\\Models\\Customer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:56:32.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "EditStatus.cshtml",
               "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Views\\Orders\\EditStatus.cshtml",
               "RelativeDocumentMoniker": "WorkshoManager\\Views\\Orders\\EditStatus.cshtml",
-              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Views\\Orders\\EditStatus.cshtml*",
-              "RelativeToolTip": "WorkshoManager\\Views\\Orders\\EditStatus.cshtml*",
+              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Views\\Orders\\EditStatus.cshtml",
+              "RelativeToolTip": "WorkshoManager\\Views\\Orders\\EditStatus.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-09T20:16:44.446Z",
@@ -85,30 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "WorkshoManager\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Order.cs",
-              "RelativeToolTip": "WorkshoManager\\Models\\Order.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA1wCIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T19:48:26.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.AspNetUsers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_WorkshoManager_0b4705a5_4f51_43a2_967d_de819cdb2609/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "dbo.AspNetUsers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-09T09:27:55.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "dbo.Orders [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_WorkshoManager_0b4705a5_4f51_43a2_967d_de819cdb2609/True/SqlTable/dbo.Orders.sql",
               "ToolTip": "dbo.Orders [Data]",
@@ -118,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Program.cs",
               "RelativeDocumentMoniker": "WorkshoManager\\Program.cs",
@@ -137,14 +165,14 @@
               "RelativeDocumentMoniker": "WorkshoManager\\Controllers\\OrdersController.cs",
               "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "WorkshoManager\\Controllers\\OrdersController.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAwwAYAAAAcAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAkwGIAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-07T21:28:26.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "ServiceTask.cs",
               "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\ServiceTask.cs",
               "RelativeDocumentMoniker": "WorkshoManager\\Models\\ServiceTask.cs",
@@ -163,14 +191,50 @@
               "RelativeDocumentMoniker": "WorkshoManager\\Views\\Orders\\Details.cshtml",
               "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Views\\Orders\\Details.cshtml",
               "RelativeToolTip": "WorkshoManager\\Views\\Orders\\Details.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAIwEAAAAAAAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAD4v0kAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-07T20:58:10.412Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Models\\Order.cs",
+              "RelativeToolTip": "WorkshoManager\\Models\\Order.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA1wCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T19:48:26.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WorkshoManager\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WorkshoManager\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T20:15:18.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dbo.AspNetUsers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_WorkshoManager_0b4705a5_4f51_43a2_967d_de819cdb2609/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "dbo.AspNetUsers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-09T09:27:55.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UsedPartsController.cs",
               "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Controllers\\UsedPartsController.cs",
               "RelativeDocumentMoniker": "WorkshoManager\\Controllers\\UsedPartsController.cs",
@@ -183,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Views\\Orders\\Create.cshtml",
               "RelativeDocumentMoniker": "WorkshoManager\\Views\\Orders\\Create.cshtml",
@@ -196,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Views\\UsedParts\\Create.cshtml",
               "RelativeDocumentMoniker": "WorkshoManager\\Views\\UsedParts\\Create.cshtml",
@@ -205,19 +269,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-07T20:45:06.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "WorkshoManager\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "WorkshoManager\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T20:15:18.443Z",
               "EditorCaption": ""
             }
           ]

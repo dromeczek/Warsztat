@@ -32,4 +32,6 @@ public class Order
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 
     public DateTime? CompletionDate { get; set; }
+
+    public List<Comment> Comments { get; set; } = new();
 }

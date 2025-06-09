@@ -90,13 +90,15 @@ public class OrdersController : Controller
     public IActionResult Details(int id)
     {
         var order = _context.Orders
-            .Include(o => o.Customer)
-            .Include(o => o.Vehicle)
-            .Include(o => o.Mechanic)
-            .Include(o => o.Tasks)
-                .ThenInclude(t => t.UsedParts)
-                    .ThenInclude(up => up.Part)
-            .FirstOrDefault(o => o.Id == id);
+        .Include(o => o.Customer)
+        .Include(o => o.Vehicle)
+        .Include(o => o.Mechanic)
+        .Include(o => o.Tasks)
+            .ThenInclude(t => t.UsedParts)
+                .ThenInclude(up => up.Part)
+        .Include(o => o.Comments)              
+            .ThenInclude(c => c.Author)         
+        .FirstOrDefault(o => o.Id == id);
 
         if (order == null)
         {

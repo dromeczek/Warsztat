@@ -67,3 +67,38 @@ else
 {
     <a asp-action="EditStatus" asp-route-id="@Model.Id" class="btn btn-warning">Zmień status</a>
 }
+
+
+<hr />
+<h4>Komentarze</h4>
+
+@if (Model.Comments != null && Model.Comments.Any())
+{
+    <ul class="list-group">
+        @foreach (var comment in Model.Comments.OrderBy(c => c.CreatedAt))
+        {
+            <li class="list-group-item">
+                <strong>@comment.Author?.UserName</strong> - @comment.CreatedAt.ToString("g")
+                <br />
+                @comment.Content
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Brak komentarzy.</p>
+}
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    <form asp-controller="Comments" asp-action="Create" method="post">
+        <input type="hidden" name="orderId" value="@Model.Id" />
+        <div class="form-group mt-2">
+            <label for="content">Dodaj komentarz:</label>
+            <textarea name="content" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Dodaj</button>
+    </form>
+}

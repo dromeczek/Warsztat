@@ -11,7 +11,7 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Part> Parts { get; set; }
     public DbSet<UsedPart> UsedParts { get; set; }
     public DbSet<ServiceTask> ServiceTasks { get; set; }
-
+    public DbSet<Comment> Comments { get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
