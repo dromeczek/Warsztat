@@ -1,0 +1,26 @@
+﻿@model WorkshoManager.Models.Part
+
+@{
+    ViewData["Title"] = "Edytuj część";
+}
+
+<h2>Edytuj część</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="UnitPrice"></label>
+        <input asp-for="UnitPrice" class="form-control" />
+        <span asp-validation-for="UnitPrice" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Zapisz zmiany</button>
+    <a class="btn btn-secondary" asp-action="Index">Anuluj</a>
+</form>

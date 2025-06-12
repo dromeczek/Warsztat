@@ -1,0 +1,68 @@
+﻿@model List<WorkshoManager.Models.ReportViewModel>
+
+@{
+    ViewData["Title"] = "Raport napraw klienta";
+}
+
+<h2>Raport napraw klienta</h2>
+
+<form method="get" class="mb-3">
+    <div class="form-row">
+        <label>Klient:</label>
+        <select name="customerId" class="form-control">
+            <option value="">Wszyscy</option>
+            @foreach (var c in ViewBag.Customers)
+            {
+                <option value="@c.Id">@c.LastName</option>
+            }
+        </select>
+
+        <label>Pojazd:</label>
+        <select name="vehicleId" class="form-control">
+            <option value="">Wszystkie</option>
+            @foreach (var v in ViewBag.Vehicles)
+            {
+                <option value="@v.Id">@v.RegistrationNumber</option>
+            }
+        </select>
+
+        <label>Miesiąc:</label>
+        <select name="month" class="form-control">
+            <option value="">Wszystkie</option>
+            @for (int m = 1; m <= 12; m++)
+            {
+                <option value="@m">@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(m)</option>
+            }
+        </select>
+
+        <button type="submit" class="btn btn-primary mt-2">Filtruj</button>
+    </div>
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Numer zlecenia</th>
+            <th>Klient</th>
+            <th>Pojazd</th>
+            <th>Data</th>
+            <th>Robocizna</th>
+            <th>Części</th>
+            <th>Suma</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderId</td>
+                <td>@item.CustomerName</td>
+                <td>@item.Vehicle</td>
+                <td>@item.CreatedAt.ToShortDateString()</td>
+                <td>@item.LaborCost zł</td>
+                <td>@item.PartsCost zł</td>
+                <td><strong>@item.TotalCost zł</strong></td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -41,7 +41,7 @@ public class OrdersController : Controller
         return View(allOrders);
     }
 
-    [Authorize(Roles = "Recepcjonista")]
+    [Authorize(Roles = "Recepcjonista,Admin")]
     public IActionResult Create()
     {
         ViewData["Customers"] = new SelectList(_context.Customers, "Id", "LastName");
@@ -53,7 +53,7 @@ public class OrdersController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    [Authorize(Roles = "Recepcjonista")]
+    [Authorize(Roles = "Recepcjonista,Admin")]
     public IActionResult Create(Order order)
     {
         if (ModelState.IsValid)
@@ -108,7 +108,7 @@ public class OrdersController : Controller
         return View(order);
     }
 
-
+    
     [Authorize(Roles = "Admin,Mechanik")]
     public async Task<IActionResult> EditStatus(int id)
     {

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WorkshoManager.Models.Part>
+
+@{
+    ViewData["Title"] = "Lista części";
+}
+
+<h2>Lista części</h2>
+
+<a class="btn btn-primary mb-3" asp-action="Create">Dodaj nową część</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Cena jednostkowa</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var part in Model)
+        {
+            <tr>
+                <td>@part.Name</td>
+                <td>@part.UnitPrice zł</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@part.Id">Edytuj</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@part.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
