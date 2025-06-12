@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using WorkshoManager.Data;
 using WorkshoManager.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace WorkshoManager.Controllers
 {
@@ -17,12 +19,18 @@ namespace WorkshoManager.Controllers
         }
 
         // GET: Vehicle/Create?customerId=1
-        public IActionResult Create(int customerId)
+        public IActionResult Create(int? customerId)
         {
-            var vehicle = new Vehicle
+            var vehicle = new Vehicle();
+
+            if (customerId.HasValue)
             {
-                CustomerId = customerId
-            };
+                vehicle.CustomerId = customerId.Value;
+            }
+            else
+            {
+                ViewData["CustomerId"] = new SelectList(_context.Customers, "Id", "LastName");
+            }
 
             return View(vehicle);
         }
@@ -34,6 +42,14 @@ namespace WorkshoManager.Controllers
         {
             if (ModelState.IsValid)
             {
+                var customerExists = await _context.Customers.AnyAsync(c => c.Id == vehicle.CustomerId);
+                if (!customerExists)
+                {
+                    ModelState.AddModelError("CustomerId", "Wybrany klient nie istnieje.");
+                    ViewBag.Customers = new SelectList(_context.Customers.ToList(), "Id", "LastName");
+                    return View(vehicle);
+                }
+
                 if (Image != null && Image.Length > 0)
                 {
                     var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
@@ -54,8 +70,10 @@ namespace WorkshoManager.Controllers
                 return RedirectToAction("Details", "Customer", new { id = vehicle.CustomerId });
             }
 
+            ViewBag.Customers = new SelectList(_context.Customers.ToList(), "Id", "LastName");
             return View(vehicle);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)

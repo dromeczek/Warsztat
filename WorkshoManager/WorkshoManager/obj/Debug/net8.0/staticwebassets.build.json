@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0tk3d6+Vr0xSWRmawwGEjGGsVvYw5dl2n7GEA/mAXb8=",
+  "Hash": "ATGrPKN75Hp3oc3jwQ3xaysQcMtlEu4bGF8TDQ1aCVk=",
   "Source": "WorkshoManager",
   "BasePath": "_content/WorkshoManager",
   "Mode": "Default",
@@ -2371,6 +2371,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\291eef19-6abf-40e9-bc30-49242f181b08.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\wwwroot\\uploads\\389daca8-f7da-4edb-9ba8-588ed28f4c98.jpg",
+      "SourceId": "WorkshoManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\wwwroot\\",
+      "BasePath": "_content/WorkshoManager",
+      "RelativePath": "uploads/389daca8-f7da-4edb-9ba8-588ed28f4c98.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\389daca8-f7da-4edb-9ba8-588ed28f4c98.jpg"
     },
     {
       "Identity": "C:\\Users\\konra\\Documents\\~Studia\\IV Semestr\\Programowanie na platformie .NET\\Projekt_Warsztat\\WorkshoManager\\WorkshoManager\\wwwroot\\uploads\\476882c5-d9bc-42ff-b065-ddcf2d05870c.jpg",
