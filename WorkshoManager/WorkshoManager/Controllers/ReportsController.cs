@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using QuestPDF.Fluent;
 using WorkshoManager.Data;
 using WorkshoManager.Data;
 using WorkshoManager.Models;
@@ -58,6 +59,15 @@ namespace WorkshoManager.Controllers
             }).ToList();
 
             return View(report);
+        }
+
+        [HttpPost]
+        public IActionResult DownloadPdf(List<Order> filteredOrders)
+        {
+            var document = new RepairReportDocument(filteredOrders);
+            var pdfBytes = document.GeneratePdf();
+
+            return File(pdfBytes, "application/pdf", "RaportNapraw.pdf");
         }
     }
 }
