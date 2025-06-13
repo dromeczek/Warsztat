@@ -70,31 +70,6 @@ public class OrdersController : Controller
         return View(order);
     }
 
-    //kli komentarz
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(string content, int orderId)
-    {
-        if (string.IsNullOrWhiteSpace(content))
-        {
-            return RedirectToAction("Details", new { id = orderId });
-        }
-
-        var user = await _userManager.GetUserAsync(User);
-
-        var comment = new Comment
-        {
-            Content = content,
-            OrderId = orderId,
-            AuthorId = user.Id,
-            CreatedAt = DateTime.Now
-        };
-
-        _context.Comments.Add(comment);
-        await _context.SaveChangesAsync();
-
-        return RedirectToAction("Details", new { id = orderId });
-    }
 
     [HttpPost]
     [Authorize(Roles = "Mechanik")]

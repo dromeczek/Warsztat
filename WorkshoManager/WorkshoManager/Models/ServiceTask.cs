@@ -24,5 +24,5 @@ namespace WorkshoManager.Models
         [ForeignKey("OrderId")]
         [ValidateNever] 
         public Order Order { get; set; }
-    }
+    }   
 }
