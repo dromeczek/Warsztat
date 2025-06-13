@@ -51,7 +51,7 @@ async Task SeedRolesAndAdminAsync(IServiceProvider serviceProvider)
     var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-    string[] roles = { "Admin", "Mechanik", "Recepcjonista" };
+    string[] roles = { "Admin", "Mechanik", "Recepcjonista", "Klient" };
 
     foreach (var role in roles)
     {
@@ -100,7 +100,11 @@ async Task SeedRolesAndAdminAsync(IServiceProvider serviceProvider)
             await userManager.AddToRoleAsync(newMechanic, "Mechanik");
         }
     }
+    //klient
+    var user = await userManager.FindByEmailAsync("klient@gmail.com");
+    await userManager.AddToRoleAsync(user, "Klient");
 }
+
 
 using (var scope = app.Services.CreateScope())
 {

@@ -16,8 +16,12 @@ public class ServiceTasksController : Controller
 
     public IActionResult Create(int orderId)
     {
-        ViewBag.OrderId = orderId;
-        return View();
+        var task = new ServiceTask
+        {
+            OrderId = orderId
+        };
+
+        return View(task);
     }
 
     [HttpPost]
@@ -31,7 +35,8 @@ public class ServiceTasksController : Controller
             return RedirectToAction("Details", "Orders", new { id = task.OrderId });
         }
 
-        ViewBag.OrderId = task.OrderId;
+        
         return View(task);
+
     }
 }

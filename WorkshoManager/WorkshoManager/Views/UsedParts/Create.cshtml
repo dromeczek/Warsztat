@@ -11,7 +11,12 @@
 
     <div class="form-group">
         <label asp-for="PartId">Część</label>
-        <select asp-for="PartId" asp-items="ViewBag.Parts" class="form-control"></select>
+        <select asp-for="PartId"
+                asp-items="ViewBag.Parts"
+                class="form-control">
+            <option value="">-- wybierz część --</option>
+        </select>
+        <span asp-validation-for="PartId" class="text-danger"></span>
     </div>
 
     <div class="form-group">

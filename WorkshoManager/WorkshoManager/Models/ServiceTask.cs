@@ -7,6 +7,7 @@ namespace WorkshoManager.Models
     public class ServiceTask
     {
         public int Id { get; set; }
+        [ValidateNever]
         public List<UsedPart> UsedParts { get; set; }
 
         [Required]
@@ -17,6 +18,7 @@ namespace WorkshoManager.Models
         [Display(Name = "Koszt robocizny")]
         public decimal LaborCost { get; set; }
 
+        [ValidateNever]
         public int OrderId { get; set; }
 
         [ForeignKey("OrderId")]
